@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Directory | 메타토리 월드</title>
+    <title>Directory | MetaToRI World</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <style>
         :root {
@@ -30,7 +30,7 @@
             z-index: 1000; mix-blend-mode: difference;
         }
 
-        .brand-nav { display: flex; align-items: center; gap: 10px; }
+        .brand-nav { display: flex; align-items: center; gap: 10px; text-decoration: none; }
         .brand-nav img { height: 24px; width: auto; }
         .brand-label { font-weight: 900; font-size: 0.8rem; letter-spacing: 0.4em; text-transform: uppercase; color: #fff; }
 
@@ -100,10 +100,10 @@
 <body>
 
     <header>
-        <div class="brand-nav">
+        <a href="https://metatoriworld.github.io/Home/" class="brand-nav">
             <img src="https://raw.githubusercontent.com/metatoriworld/Logo/main/WhiteLogo.png" alt="Logo">
             <div class="brand-label">MetaToRI World</div>
-        </div>
+        </a>
     </header>
 
     <div class="hover-reveal" id="reveal">
@@ -114,19 +114,19 @@
         <section id="section1">
             <span class="group-divider">01 IDENTITY</span>
             <div class="list-container">
-                <a href="https://metatoriworld.github.io/underconstruction/" class="list-item" data-img="https://images.unsplash.com/photo-1454165833767-027eeef1596b?q=80&w=800">
+                <a href="https://metatoriworld.github.io/Introduction/" class="list-item" data-img="https://images.unsplash.com/photo-1454165833767-027eeef1596b?q=80&w=800">
                     <div class="item-main"><span class="item-num">01</span><h2 class="item-title">소개</h2></div>
                     <div class="item-desc">ABOUT BRAND</div>
                 </a>
-                <a href="https://metatoriworld.github.io/underconstruction/" class="list-item" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800">
+                <a href="https://metatoriworld.github.io/Overview/" class="list-item" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800">
                     <div class="item-main"><span class="item-num">02</span><h2 class="item-title">개요</h2></div>
                     <div class="item-desc">WORLD OVERVIEW</div>
                 </a>
-                <a href="https://metatoriworld.github.io/underconstruction/" class="list-item" data-img="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800">
+                <a href="https://metatoriworld.github.io/Metatori/" class="list-item" data-img="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800">
                     <div class="item-main"><span class="item-num">03</span><h2 class="item-title">캐릭터</h2></div>
                     <div class="item-desc">MAIN CHARACTER</div>
                 </a>
-                <a href="https://metatoriworld.github.io/underconstruction/" class="list-item" data-img="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800">
+                <a href="https://metatoriworld.github.io/operation/" class="list-item" data-img="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800">
                     <div class="item-main"><span class="item-num">04</span><h2 class="item-title">운영</h2></div>
                     <div class="item-desc">OPERATIONS</div>
                 </a>
@@ -174,7 +174,7 @@
         const revealImg = document.getElementById('revealImg');
 
         window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY + (window.innerHeight * 0.6); // 모바일에서 더 정확하게 인식하도록 0.6으로 조정
+            const scrollY = window.scrollY + (window.innerHeight * 0.6); 
             const s2Top = section2.offsetTop;
             const footerTop = footer.offsetTop;
 
@@ -185,7 +185,6 @@
             }
         });
 
-        // 데스크탑 전용 호버 효과 (모바일에서는 무시됨)
         if (window.innerWidth > 768) {
             items.forEach(item => {
                 item.addEventListener('mouseenter', () => {
